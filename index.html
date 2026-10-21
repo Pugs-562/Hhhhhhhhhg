@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Chess Brawlers 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <!-- UI Overlay for Mobile/Touch Controls -->
+    <div id="ui-overlay" class="hidden">
+        <div id="joystick-zone">
+            <div id="joystick-base"><div id="joystick-stick"></div></div>
+        </div>
+        <div id="look-zone"></div>
+        <div id="action-buttons">
+            <button class="action-btn" id="btn-dodge">Dodge</button>
+            <button class="action-btn" id="btn-attack">Attack</button>
+            <button class="action-btn" id="btn-abil1">Skill 1</button>
+            <button class="action-btn" id="btn-abil2">Skill 2</button>
+        </div>
+    </div>
+
+    <!-- Main Menu UI -->
+    <div id="menu-screen">
+        <h1>Chess Brawlers 3D</h1>
+        <button id="btn-play-local">Pass & Play / vs AI</button>
+        <button id="btn-multiplayer">Multiplayer (Room Code)</button>
+        <div id="multiplayer-box" class="hidden">
+            <input type="text" id="room-input" placeholder="Enter Room Code (e.g. A4F9)">
+            <button id="btn-join-room">Join Room</button>
+            <button id="btn-create-room">Create Room</button>
+        </div>
+    </div>
+
+    <!-- Modular Scripts -->
+    <script src="js/skins.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/arena.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/net.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
